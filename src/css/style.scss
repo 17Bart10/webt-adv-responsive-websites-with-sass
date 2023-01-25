@@ -1,0 +1,24 @@
+$size: 40px;
+$farbe-blau: rgb(0, 0, 255);
+
+$breakpoints: (
+  "tablet": 360px,
+  "desktop": 768px,
+  "lDesktop": 1366px,
+) !default;
+
+body {
+  background-color: yellow;
+
+  //font-size: $size;
+
+  @media (min-width: map-get($breakpoints, "tablet")) {
+    background-color: $farbe-blau;
+  }
+  @media (min-width: map-get($breakpoints, "desktop")) {
+    background-color: blueviolet;
+  }
+  @media (min-width: map-get($breakpoints, "lDesktop")) {
+    background-color: violet;
+  }
+}
